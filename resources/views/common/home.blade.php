@@ -2,7 +2,6 @@
 
 @section('content')
     <section class="hero is-primary is-medium">
-        <!-- Hero content: will be in the middle -->
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title">{{ trans('meta.home.title') }}</h1>
