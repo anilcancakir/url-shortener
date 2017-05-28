@@ -16,8 +16,8 @@ cache:
 
 before_install:
   - travis_retry composer self-update
-  - nvm install 0.12
-  - nvm use 0.12
+  - nvm install stable
+  - nvm use stable
 
 install:
   - travis_retry composer install --no-interaction --prefer-dist --no-suggest
