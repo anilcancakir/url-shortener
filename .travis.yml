@@ -3,9 +3,6 @@ language: php
 php:
   - 7.0
 
-addons:
-  postgresql: "9.4"
-
 matrix:
   fast_finish: true
 
@@ -28,4 +25,4 @@ install:
   - cp .env.example .env
   - php artisan key:generate
 
-script: vendor/bin/phpunit
+script: vendor/bin/phpunit --configuration phpunit.xml
