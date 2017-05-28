@@ -9,6 +9,7 @@ matrix:
 sudo: false
 
 cache:
+  yarn: true
   directories:
     - node_modules
     - vendor
@@ -18,12 +19,13 @@ before_install:
   - travis_retry composer self-update
   - nvm install stable
   - nvm use stable
+  - npm install -g yarn && yarn
 
 install:
   - travis_retry composer install --no-interaction --prefer-dist --no-suggest
-  - travis_retry npm install
+  - travis_retry yarn install
   - cp .env.example .env
   - php artisan key:generate
-  - npm run dev
+  - npm run production
 
 script: vendor/bin/phpunit --configuration phpunit.xml
