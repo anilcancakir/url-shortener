@@ -12,22 +12,19 @@ matrix:
 sudo: false
 
 cache:
-  yarn: true
   directories:
     - node_modules
     - vendor
     - $HOME/.composer/cache
-    - $HOME/.yarn-cache
 
 before_install:
   - travis_retry composer self-update
   - nvm install 0.12
   - nvm use 0.12
-  - npm install -g yarn && yarn
 
 install:
   - travis_retry composer install --no-interaction --prefer-dist --no-suggest
-  - travis_retry yarn install
+  - travis_retry npm install
   - cp .env.example .env
   - php artisan key:generate
 
