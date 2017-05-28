@@ -1,3 +1,5 @@
-<p align="center">
-<a href="https://travis-ci.org/anilcancakir/url-shortener"><img src="https://travis-ci.org/anilcancakir/url-shortener.svg" alt="Build Status"></a>
-</p>
+# URL-Shortener
+
+[![Build Status](https://secure.travis-ci.org/anilcancakir/url-shortener.svg)](http://travis-ci.org/anilcancakir/url-shortener)
+
+URL Shortener Web Application by Laravel 5.4 Edit
