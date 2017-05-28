@@ -2,7 +2,6 @@ language: php
 
 php:
   - 7.0
-  - 7.1
 
 addons:
   postgresql: "9.4"
@@ -14,19 +13,19 @@ sudo: false
 
 cache:
   directories:
+    - node_modules
+    - vendor
     - $HOME/.composer/cache
 
-services:
-  - memcached
-  - redis-server
-
 before_install:
-  - if [[ $TRAVIS_PHP_VERSION != 7.1 ]] ; then phpenv config-rm xdebug.ini; fi
   - travis_retry composer self-update
-  - cp .env.example .env
-  - php artisan key:generate
+  - nvm install 0.12
+  - nvm use 0.12
 
 install:
   - travis_retry composer install --no-interaction --prefer-dist --no-suggest
+  - travis_retry npm install
+  - cp .env.example .env
+  - php artisan key:generate
 
 script: vendor/bin/phpunit
