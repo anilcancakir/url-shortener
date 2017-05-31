@@ -13,6 +13,7 @@ class CommonController extends Controller
      */
     public function home() {
         SEO::setTitle(trans('meta.home.title'))->setDescription(trans('meta.home.description'));
+
         return view('common.home');
     }
 }

@@ -1,0 +1,1 @@
+DROP FUNCTION IF EXISTS calculate_url_key_by_id() CASCADE;

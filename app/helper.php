@@ -31,3 +31,15 @@ if (!function_exists('isRouteGroup')) {
         return preg_match('/' . $prefix . '\./', $currentRoute) ? $returnString : '';
     }
 }
+
+if (!function_exists('decode')) {
+    function decode($key) {
+        return \App\Math::to_base_10($key, 62) - 10;
+    }
+}
+
+if (!function_exists('encode')) {
+    function encode($id) {
+        return \App\Math::to_base(($id + 10), 62);
+    }
+}
