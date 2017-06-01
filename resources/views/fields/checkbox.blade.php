@@ -13,7 +13,5 @@
         </label>
     </p>
 
-    @foreach($errors->get($name) as $error)
-        <p class="help is-danger">{{ $error }}</p>
-    @endforeach
+    @include('fields.errors', ['name' => $name])
 </div>

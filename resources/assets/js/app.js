@@ -13,6 +13,8 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+Vue.component('copyInput', require('./components/copyInput.vue'));
+
 const app = new Vue({
     el: '#app',
     data: {

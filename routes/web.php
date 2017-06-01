@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/', 'CommonController@home')->name('home');
-
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
@@ -27,3 +25,8 @@ Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm'
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
+// Url Routes...
+Route::get('/', 'UrlsController@create')->name('urls.create');
+Route::post('urls', 'UrlsController@store')->name('urls.store');
+Route::get('{url}', 'UrlsController@show')->name('urls.show');

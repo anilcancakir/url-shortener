@@ -123,7 +123,8 @@ return [
         'password' => 'Şifre',
         'password_confirmation' => 'Şifre Doğrula',
         'remember_me' => 'Beni Hatırla',
-        'tos' => 'Kullanım Koşulları'
+        'tos' => 'Kullanım Koşulları',
+        'url' => 'Bağlantı'
     ],
 
 ];

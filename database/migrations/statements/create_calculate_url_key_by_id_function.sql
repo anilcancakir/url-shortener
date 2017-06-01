@@ -22,10 +22,10 @@ $$
         result := substr(CHARS, tempFrom, 1);
 
         -- For debug
-        RAISE NOTICE '(start) r -> %', r;
-        RAISE NOTICE '(start) q -> %', q;
-        RAISE NOTICE '(start) tempFrom -> %', tempFrom;
-        RAISE NOTICE '(start) result -> %', result;
+--         RAISE NOTICE '(start) r -> %', r;
+--         RAISE NOTICE '(start) q -> %', q;
+--         RAISE NOTICE '(start) tempFrom -> %', tempFrom;
+--         RAISE NOTICE '(start) result -> %', result;
 
 
         WHILE q LOOP
@@ -36,15 +36,15 @@ $$
           result := concat(substr(CHARS, tempFrom, 1), result);
 
           -- For debug
-          RAISE NOTICE '(loop) tempQ -> %', tempQ;
-          RAISE NOTICE '(loop) r -> %', r;
-          RAISE NOTICE '(loop) q -> %', q;
-          RAISE NOTICE '(loop) tempFrom -> %', tempFrom;
-          RAISE NOTICE '(loop) result -> %', result;
+--           RAISE NOTICE '(loop) tempQ -> %', tempQ;
+--           RAISE NOTICE '(loop) r -> %', r;
+--           RAISE NOTICE '(loop) q -> %', q;
+--           RAISE NOTICE '(loop) tempFrom -> %', tempFrom;
+--           RAISE NOTICE '(loop) result -> %', result;
         END LOOP;
 
         -- For debug
-        RAISE NOTICE '(FINAL) result -> %', result;
+--         RAISE NOTICE '(FINAL) result -> %', result;
         NEW.key := result;
       END IF;
 
